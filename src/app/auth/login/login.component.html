@@ -1,8 +1,8 @@
-<div class="flex " style="background-color: #B0BEC5;">
-    <div class="m-auto" >
+<div class="flex">
+    <div class="m-auto">
         <mat-card class="mat-card">
-            <mat-card-content >
-                <form action="" >
+            <mat-card-content>
+                <form action="">
 
                     <mat-card-title class="text-color">
                         Abnormal Load Permits Login
@@ -16,7 +16,7 @@
                         <mat-select [(ngModel)]="selectedValue" name="role">
                             <mat-option *ngFor="let role of roles" [value]="role.value">
                                 {{role.viewValue}}
-                              </mat-option>
+                            </mat-option>
                         </mat-select>
                     </mat-form-field>
                     <p> Selected Role: {{selectedValue}} </p>
@@ -25,25 +25,25 @@
 
                     <mat-form-field>
                         <mat-label>Email</mat-label>
-                        <input matInput type="email" required/>
+                        <input matInput type="email" required />
                     </mat-form-field>
                     <pre></pre>
 
                     <mat-form-field>
                         <mat-label>Password</mat-label>
-                        <input matInput type="password" required/>
+                        <input matInput type="password" required />
                     </mat-form-field>
-                    
-                     </form>
+
+                </form>
             </mat-card-content>
             <mat-divider></mat-divider>
-                    <mat-card-actions>
-                        <button (click) ="login()" color="accent" type="submit" mat-raised-button>
-                            <mat-spinner *ngIf="isLoading" diameter="30"></mat-spinner>
-                            <span *ngIf="!isLoading">Login</span>
-                        </button>
-                      
-                    </mat-card-actions>
+            <mat-card-actions>
+                <button (click)="login()" color="accent" type="submit" mat-raised-button>
+                    <mat-spinner *ngIf="isLoading" diameter="30"></mat-spinner>
+                    <span *ngIf="!isLoading">Login</span>
+                </button>
+
+            </mat-card-actions>
         </mat-card>
     </div>
 </div>

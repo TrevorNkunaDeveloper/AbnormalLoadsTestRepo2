@@ -1,0 +1,26 @@
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <section class="content">
+                ABNORMAL LOADS PERMIT
+                <pre></pre>
+                SYSTEM
+                <pre></pre>
+                <button (click)="test()" type="button" mat-stroked-button class="mainButton">       
+                    <mat-spinner *ngIf="isLoading" diameter="30"></mat-spinner>
+                    <span *ngIf="!isLoading">CONTINUE</span>
+                </button>
+
+            </section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>

@@ -23,7 +23,7 @@ export class LoginComponent {
 
   login(){
     this.isLoading = true;
-    setTimeout(()=>{this.router.navigate(['/'])},2000)
+    setTimeout(()=>{this.router.navigate(['/home'])},1000)
   }
 
   roles: Role[] = [
