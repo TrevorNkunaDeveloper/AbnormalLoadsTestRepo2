@@ -7,6 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .flex{
     display:flex;
     flex-direction: column;
+    background-color: #B0BEC5;
 }
 
 .justify-content-between{
@@ -15,6 +16,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .m-auto{
     margin: auto;
+    margin-bottom: 100px;
 }
 
 .text-color{

@@ -1,5 +1,5 @@
-<div class="flex ">
-    <div class="m-auto">
+<div class="flex " style="background-color: #B0BEC5;">
+    <div class="m-auto" >
         <mat-card class="mat-card">
             <mat-card-content >
                 <form action="" >
@@ -10,6 +10,18 @@
                     <mat-card-subtitle>
                         Login
                     </mat-card-subtitle>
+
+                    <mat-form-field>
+                        <mat-label>Login Role</mat-label>
+                        <mat-select [(ngModel)]="selectedValue" name="role">
+                            <mat-option *ngFor="let role of roles" [value]="role.value">
+                                {{role.viewValue}}
+                              </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <p> Selected Role: {{selectedValue}} </p>
+                    <pre></pre>
+                    <mat-divider></mat-divider>
 
                     <mat-form-field>
                         <mat-label>Email</mat-label>
