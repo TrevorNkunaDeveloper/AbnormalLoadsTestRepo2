@@ -15,6 +15,10 @@ import {NgFor} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
@@ -34,7 +38,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     FormsModule,
     NgFor,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatProgressBarModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialDesignModule { }

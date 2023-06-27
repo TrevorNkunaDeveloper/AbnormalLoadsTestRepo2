@@ -14,6 +14,7 @@ import { Tab2Component } from './tabs/tab2/tab2.component';
 import { Tab3Component } from './tabs/tab3/tab3.component';
 import { TestanimationsComponent } from './test/testanimations/testanimations.component';
 import { TestComponent } from './test/test/test.component';
+import { SidenavComponent } from './sidenavs/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TestComponent } from './test/test/test.component';
     Tab2Component,
     Tab3Component,
     TestanimationsComponent,
-    TestComponent
+    TestComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
