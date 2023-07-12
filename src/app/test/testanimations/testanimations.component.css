@@ -9,8 +9,10 @@ body {
     height: 100%;
     overflow: hidden;
     background: #24C6DC; 
-    background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);  
-    background: linear-gradient(to bottom, #514A9D, #24C6DC); 
+    background: -webkit-linear-gradient(to bottom,#69F0AE,#03e87a);
+    background: linear-gradient(to bottom,#69F0AE,#03e87a)
+    /* background: -webkit-linear-gradient(to bottom,#24C6DC ,  #514A9D);  
+    background: linear-gradient(to bottom, #24C6DC,#514A9D );  */
   }
   
   .box div {
@@ -106,8 +108,14 @@ body {
 
   .mainButton{
     border-radius: 15px;
+    text-shadow:0 0 1vw #fdfeff;
     height: 200px;
     width: 400px; 
     font-size: xx-large; 
-    color: #B0BEC5;
+    color: #000000;
+}
+.mainButton:hover{
+  background-color: #00f128;
+  background: -webkit-linear-gradient(to bottom,#69F0AE,#00f128);
+    background: linear-gradient(to bottom,#69F0AE,#00f128)
 }
