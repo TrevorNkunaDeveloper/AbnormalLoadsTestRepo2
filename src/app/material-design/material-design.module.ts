@@ -18,7 +18,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [],
@@ -42,7 +43,8 @@ import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
     MatSidenavModule,
     MatListModule,
     MatProgressBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule
   ]
 })
 export class MaterialDesignModule { }

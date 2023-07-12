@@ -34,9 +34,11 @@ interface Avno {
 })
 export class Tab1Component {
   selectedValue: string;
+  permitType: string;
 
   constructor(private router: Router){
     this.selectedValue = '';
+    this.permitType='';
   }
 
   tiles: Tile[] = [
@@ -91,5 +93,7 @@ export class Tab1Component {
     {value:'avno-2',viewValue:'sample av no 3'},
     {value:'avno-3',viewValue:'sample av no 4'},
   ];
+
+  types : string[] = ['Trip', 'Route-Period', 'Area-Period'];
 
 }
