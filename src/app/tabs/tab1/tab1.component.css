@@ -28,3 +28,7 @@
     margin: auto 10px;
     justify-content: space-between;
 }
+
+.tile-width{
+    width: 800px;
+}

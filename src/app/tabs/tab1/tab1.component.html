@@ -134,9 +134,9 @@
                     <mat-tab label="Vehicle/Ld Details">
                         <pre></pre>
                     
-                        <mat-grid-list cols="2">
+                        <mat-grid-list cols="2" rowHeight="3:1" >
 
-                            <mat-grid-tile>
+                            <mat-grid-tile [rowspan]="2">
                                 <mat-card class="transparent-card">
                                     <section>
                                         <mat-checkbox class="example-margin">Laden</mat-checkbox>
@@ -150,23 +150,49 @@
                                 </mat-card>
                             </mat-grid-tile>
 
-                            <mat-grid-tile>
+                            <mat-grid-tile [rowspan]="2">
                                 <mat-card class="transparent-card">
                                     <section>
                                         <mat-checkbox class="example-margin" [disabled]="false">E/C/A</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">Container</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">Emergency</mat-checkbox>
-                                        <mat-checkbox class="example-margin" [disabled]="true">Car
-                                            Carrier</mat-checkbox>
+                                        <mat-checkbox class="example-margin" [disabled]="true">Car Carrier</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">SC</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">PBS</mat-checkbox>
                                     </section>
                                 </mat-card>
                             </mat-grid-tile>
+                            <mat-grid-tile class="tile-width" [rowspan]="2">
+                                <mat-card class="transparent-card" style="margin: auto 0px; width: 300px;">
+                                        <mat-card-title class="text-align-center">AV Number (5.12)</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">AV No</mat-label>
+                                            <mat-select [(ngModel)]="selectedValue" name="avno">
+                                                <mat-option *ngFor="let avno of avnos" [value]="avno.value">
+                                                    {{avno.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
 
-                            <mat-grid-tile>
+                            <mat-grid-tile class="tile-width" [rowspan]="2">
+                                <mat-card class="transparent-card" style="margin: auto 0px; width: 700px;">
+                                        <mat-card-title class="text-align-center">Description of Load/Crane (Make/Model)</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Description of Load</mat-label>
+                                            <textarea matInput ></textarea>
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [rowspan]="4">
                                 <mat-card class="transparent-card" style="margin: auto 10px;">
-                                        <mat-card-title class="text-align-center">Registration Number(s)</mat-card-title>
+                                        <mat-card-title class="text-align-center">Registration Number(s)(5.12)</mat-card-title>
                                     <section class="text-align-center">
                                     
                                     <mat-form-field appearance="outline" class="transparent-card ">
@@ -191,7 +217,7 @@
                                 <pre></pre>
                             </mat-grid-tile>
 
-                            <mat-grid-tile>
+                            <mat-grid-tile [rowspan]="4">
                                 <mat-card class="transparent-card" style="margin: auto 10px;">
                                     <mat-card-title class="text-align-center">Load Details</mat-card-title>
                                     <section class="text-align-center">
@@ -215,11 +241,165 @@
                                 </mat-card>
                             </mat-grid-tile>
 
-                            <mat-grid-tile>
-                                <mat-list>
-                                                                 
-                                </mat-list>
+                            <mat-grid-tile [colspan]="2" [rowspan]="2">
+                                <mat-card class="transparent-card" style="margin: auto 10px;">
+                                    <mat-card-title class="text-align-center">Vehicle/Crane Details(5.2)</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Total Length</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Total Width</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Total Height</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">WheelBase</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">WheelTrack</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
                             </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="1" [rowspan]="2">
+                                <mat-card class="transparent-card" style="margin: auto 10px;">
+                                    <mat-card-title class="text-align-center">Stability Ratio's</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Height</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Width</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="1" [rowspan]="2">
+                                <mat-card class="transparent-card" style="margin: auto 10px;">
+                                    <mat-card-title class="text-align-center">Overhang</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Front</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Rear</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                <mat-card class="transparent-card" style="margin: auto 0px;">
+                                    <mat-card-title class="text-align-center">Front Load Projection</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Projection</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Height</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                <mat-card class="transparent-card" style="margin: auto 0px;">
+                                    <mat-card-title class="text-align-center">Rear Load Projection</mat-card-title>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Projection</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Height</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Vertical Dimension</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="2" [rowspan]="3">
+                                <mat-card class="transparent-card" style="margin: auto 0px;">
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Axle Unit</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Max Unit Mass(kg)</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Actual Mass(Kg)</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Number of Axles</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Axle Type</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Tyre Pressure(kPa)</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">W-spacing 1(mm)</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">W-spacing 2(mm)</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                <mat-card class="transparent-card" style="margin: auto 0px;">
+                                    <section class="text-align-center">
+                                        <mat-checkbox class="example-margin" [disabled]="true">Use Actual Tyre Pressure</mat-checkbox>
+                                        <mat-checkbox class="example-margin" [disabled]="true">Use Actual Wheel Spacings</mat-checkbox>
+                                        <mat-checkbox class="example-margin" [disabled]="false">Enter Total Actual Mass</mat-checkbox>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                <mat-card class="transparent-card" style="margin: auto 0px;">
+                                    <section class="text-align-center">
+                                        <mat-checkbox class="example-margin" [disabled]="false">Is unladen vehicle/comb abnormal(5.4)?</mat-checkbox>
+
+                                        <mat-form-field appearance="outline" >
+                                            <mat-label class="text-color">Unladen Permit Number</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
                         </mat-grid-list>
                         <pre></pre>
                         <div style="margin: auto 50px;">

@@ -22,6 +22,11 @@ interface Owner {
   viewValue: string;
 }
 
+interface Avno {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-tab1',
   templateUrl: './tab1.component.html',
@@ -78,6 +83,13 @@ export class Tab1Component {
     {value:'owner-1',viewValue:'sample owner 2'},
     {value:'owner-2',viewValue:'sample owner 3'},
     {value:'owner-3',viewValue:'sample owner 4'},
+  ];
+
+  avnos: Avno[] = [
+    {value:'avno-0',viewValue:'sample av no 1'},
+    {value:'avno-1',viewValue:'sample av no 2'},
+    {value:'avno-2',viewValue:'sample av no 3'},
+    {value:'avno-3',viewValue:'sample av no 4'},
   ];
 
 }
