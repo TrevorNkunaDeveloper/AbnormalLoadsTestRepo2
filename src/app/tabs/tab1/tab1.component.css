@@ -1,3 +1,4 @@
+
 .mat-tab-group {
     margin-bottom: 48px;
 }
@@ -10,3 +11,20 @@
     background-color:transparent !important;
 }
 
+.align-left{
+    justify-content: flex-end;
+}
+.align-right{
+    justify-content: flex-start;
+}
+
+.align-center{
+    justify-content: center;
+    display: flex;
+}
+
+.transparent-card{
+    background-color: transparent !important;
+    margin: auto 10px;
+    justify-content: space-between;
+}

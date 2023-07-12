@@ -6,7 +6,7 @@
                     <mat-tab label="Owner/Account Details">
                         <pre></pre>
                         
-                        <mat-grid-list cols="1" rowHeight="6:1">
+                        <mat-grid-list cols="1" rowHeight="3:1">
 
                             <mat-grid-tile style="margin: auto 10px; padding: auto 5px;">
                                 <mat-form-field appearance="outline" class="mat-form">
@@ -30,7 +30,7 @@
                         </mat-grid-list>
                         <mat-divider style="background-color: #69F0AE;"></mat-divider>
                         <h1 class="text-align-center">Account details</h1>
-                        <mat-grid-list cols="3" rowHeight="3:1">
+                        <mat-grid-list cols="3" rowHeight="2:1">
                             <mat-grid-tile>
                                 <mat-form-field appearance="outline" >
                                     <mat-label class="text-color">Account Type</mat-label>
@@ -88,7 +88,7 @@
                             </mat-grid-tile>
                             <mat-grid-tile>
                                 <mat-form-field appearance="outline" >
-                                    <mat-label class="text-color">Name of Carrier</mat-label>
+                                    <mat-label class="text-color" style="background-color: transparent;">Name of Carrier</mat-label>
                                     <input matInput type="text" />
                                 </mat-form-field>
                             </mat-grid-tile>
@@ -137,7 +137,7 @@
                         <mat-grid-list cols="2">
 
                             <mat-grid-tile>
-                                <mat-card style="padding: auto 10px;">
+                                <mat-card class="transparent-card">
                                     <section>
                                         <mat-checkbox class="example-margin">Laden</mat-checkbox>
                                         <mat-checkbox class="example-margin">Unladen</mat-checkbox>
@@ -151,9 +151,9 @@
                             </mat-grid-tile>
 
                             <mat-grid-tile>
-                                <mat-card style="margin:auto 20px;">
+                                <mat-card class="transparent-card">
                                     <section>
-                                        <mat-checkbox class="example-margin" [disabled]="true">E/C/A</mat-checkbox>
+                                        <mat-checkbox class="example-margin" [disabled]="false">E/C/A</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">Container</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">Emergency</mat-checkbox>
                                         <mat-checkbox class="example-margin" [disabled]="true">Car
@@ -165,7 +165,34 @@
                             </mat-grid-tile>
 
                             <mat-grid-tile>
-                                <mat-card style="margin: auto 10px;">
+                                <mat-card class="transparent-card" style="margin: auto 10px;">
+                                        <mat-card-title class="text-align-center">Registration Number(s)</mat-card-title>
+                                    <section class="text-align-center">
+                                    
+                                    <mat-form-field appearance="outline" class="transparent-card ">
+                                        <mat-label class="text-color" style="background-color: transparent;">Truck Tractor</mat-label>
+                                        <input matInput type="text" />
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline" class="transparent-card">
+                                        <mat-label class="text-color" style="background-color: transparent;">Dolly</mat-label>
+                                        <input matInput type="text" />
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline" class="transparent-card">
+                                        <mat-label class="text-color" style="background-color: transparent;">Trailer</mat-label>
+                                        <input matInput type="text" />
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline" class="transparent-card">
+                                        <mat-label class="text-color" style="background-color: transparent;">Other</mat-label>
+                                        <input matInput type="text" />
+                                    </mat-form-field>
+                                    </section>
+                                    
+                                </mat-card>
+                                <pre></pre>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <mat-card class="transparent-card" style="margin: auto 10px;">
                                     <mat-card-title class="text-align-center">Load Details</mat-card-title>
                                     <section class="text-align-center">
                                         <mat-form-field appearance="outline" >
@@ -229,11 +256,27 @@
                         </mat-grid-list>
                         <pre></pre>
                         <div style="margin: auto 50px;">
-                            <mat-progress-bar value="primary" mode="determinate" value="100"></mat-progress-bar>
+                            <mat-progress-bar value="primary" mode="determinate" value="100" color="green"></mat-progress-bar>
                         </div>
                         <pre></pre>
                     </mat-tab>
                 </mat-tab-group>
+
+                <div>
+                    <mat-grid-list cols="2" rowHeight="100px">
+                        <mat-grid-tile>
+                            <mat-card-actions class="align-left">
+                                <button mat-raised-button color="accent">Previous</button>
+                            </mat-card-actions>
+                        </mat-grid-tile>
+                
+                        <mat-grid-tile>
+                            <mat-card-actions class="align-right">
+                                <button mat-raised-button color="accent"> Next </button>
+                            </mat-card-actions>
+                        </mat-grid-tile>
+                    </mat-grid-list>  
+                </div>
             </mat-card-content>
         </mat-card>
     </div>

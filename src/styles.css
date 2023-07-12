@@ -1,64 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
-.flex{
-    display:flex;
-    flex-direction: column;
-    background-color: #BFF0D8;
+html,
+body {
+  height: 100%;
 }
 
-.justify-content-between{
-    justify-content: space-between;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.m-auto{
-    margin: auto;
-    margin-bottom: 100px;
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  background-color: #BFF0D8;
+  background: -webkit-linear-gradient(to bottom, #69F0AE, #03e87a);
+  background: linear-gradient(to bottom, #69F0AE, #03e87a)
 }
 
-.text-color{
-    color: white;
+.justify-content-between {
+  justify-content: space-between;
 }
- .mat-card{
-    margin-top: 200px;
-    padding: 40px;
-    width: 100%;
-    background-color: #69F0AE !important;
+
+.m-auto {
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.text-color {
+  color: white;
+}
+
+.mat-card {
+  margin-top: 200px;
+  padding: 40px;
+  width: 100%;
+  background-color: #69F0AE !important;
 }
 
 .mat-grid-tile {
-    /* background: #69F0AE; */
-  }
-
-  .example-h2 {
-    margin: 10px;
-  }
-  
-  .example-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 60px;
-  }
-  
-  .example-margin {
-    margin: auto 10px;
-  }
-
-  .mat-card-tab{
-    margin-top: 50px;
-    padding: 10px;
-    width: 100%;
-    background-color: #69F0AE !important;
+  /* background: #69F0AE; */
 }
-.text-align-center{
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: auto 10px;
+}
+
+.mat-card-tab {
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+  background-color: #69F0AE !important;
+  
+  background: -webkit-linear-gradient(to bottom,#69F0AE,#03e87a) !important;
+  background: linear-gradient(to bottom,#69F0AE,#03e87a) !important
+}
+
+.text-align-center {
   text-align: center;
 }
 
-.text-color{
+.text-color {
   color: #ffffff;
 }
