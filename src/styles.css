@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -7,7 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .flex{
     display:flex;
     flex-direction: column;
-    background-color: #B0BEC5;
+    background-color: #BFF0D8;
 }
 
 .justify-content-between{
@@ -22,15 +23,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-color{
     color: white;
 }
-
-.mat-card{
+ .mat-card{
     margin-top: 200px;
     padding: 40px;
     width: 100%;
+    background-color: #69F0AE !important;
 }
 
 .mat-grid-tile {
-    background: #B0BEC5;
+    /* background: #69F0AE; */
   }
 
   .example-h2 {
@@ -47,3 +48,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .example-margin {
     margin: auto 10px;
   }
+
+  .mat-card-tab{
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%;
+    background-color: #69F0AE !important;
+}
+.text-align-center{
+  text-align: center;
+}
+
+.text-color{
+  color: #ffffff;
+}

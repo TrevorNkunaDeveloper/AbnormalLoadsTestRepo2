@@ -7,13 +7,11 @@
                     <mat-card-title class="text-color" style="text-align: center;">
                         Login
                     </mat-card-title>
-                    <mat-card-subtitle>
-                        Login
-                    </mat-card-subtitle>
+                    <pre></pre>
 
-                    <mat-form-field>
-                        <mat-label>Login Role</mat-label>
-                        <mat-select [(ngModel)]="selectedValue" name="role">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="text-color">Login Role</mat-label>
+                        <mat-select class="text-color" [(ngModel)]="selectedValue" name="role">
                             <mat-option *ngFor="let role of roles" [value]="role.value">
                                 {{role.viewValue}}
                             </mat-option>
@@ -23,15 +21,15 @@
                     <pre></pre>
                     <mat-divider></mat-divider>
 
-                    <mat-form-field>
-                        <mat-label>Email</mat-label>
-                        <input matInput type="email" required />
+                    <mat-form-field appearance="outline">
+                        <mat-label class="text-color">Email</mat-label>
+                        <input class="text-color" matInput type="email" required />
                     </mat-form-field>
                     <pre></pre>
 
-                    <mat-form-field>
-                        <mat-label>Password</mat-label>
-                        <input matInput type="password" required />
+                    <mat-form-field appearance="outline">
+                        <mat-label class="text-color">Password</mat-label>
+                        <input class="text-color" matInput type="password" required />
                     </mat-form-field>
 
                 </form>
