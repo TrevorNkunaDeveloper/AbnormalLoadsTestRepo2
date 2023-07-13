@@ -431,32 +431,36 @@
                                     <section>
                                         <mat-checkbox class="example-margin">Empty Only</mat-checkbox>
                                         <mat-radio-group [(ngModel)]="permitType">
-                                            <mat-radio-button *ngFor="let type of  types" [value]="type">{{type}}</mat-radio-button>
+                                            <mat-radio-button *ngFor="let type of  types"
+                                                [value]="type">{{type}}</mat-radio-button>
                                         </mat-radio-group>
                                         {{permitType}}
                                     </section>
-                                    
+
                                 </mat-card>
                             </mat-grid-tile>
 
                             <mat-grid-tile [colspan]="1" [rowspan]="2">
                                 <mat-card class="transparent-card">
                                     <section>
-                                        <mat-checkbox class="example-margin" [disabled]="false">Night Travel</mat-checkbox>
-                                        <mat-checkbox class="example-margin" [disabled]="true">Weekend Travel</mat-checkbox>
+                                        <mat-checkbox class="example-margin" [disabled]="false">Night
+                                            Travel</mat-checkbox>
+                                        <mat-checkbox class="example-margin" [disabled]="true">Weekend
+                                            Travel</mat-checkbox>
                                     </section>
                                 </mat-card>
                             </mat-grid-tile>
 
                             <mat-grid-tile [colspan]="1" [rowspan]="4">
                                 <mat-card class="transparent-card">
-                                    <mat-card-title class="text-align-center">Route/ Area of Operation(6.2)</mat-card-title>
+                                    <mat-card-title class="text-align-center">Route/ Area of
+                                        Operation(6.2)</mat-card-title>
                                     <section class="text-align-center">
                                         Travelling from<br>
                                         <mat-form-field appearance="outline">
                                             <mat-label class="text-color">Point of Departure</mat-label>
                                             <input matInput type="text" />
-                                        </mat-form-field> 
+                                        </mat-form-field>
                                         <br>to<br>
                                         <mat-form-field appearance="outline">
                                             <mat-label class="text-color">Destination</mat-label>
@@ -465,7 +469,8 @@
                                         <mat-form-field appearance="outline">
                                             <mat-label class="text-color">Route Code</mat-label>
                                             <mat-select [(ngModel)]="selectedValue" name="routeCode">
-                                                <mat-option *ngFor="let routeCode of routeCodes" [value]="routeCode.value">
+                                                <mat-option *ngFor="let routeCode of routeCodes"
+                                                    [value]="routeCode.value">
                                                     {{routeCode.viewValue}}
                                                 </mat-option>
                                             </mat-select>
@@ -513,7 +518,7 @@
                                         <mat-form-field appearance="outline">
                                             <mat-label class="text-color">Point of Departure</mat-label>
                                             <input matInput type="text" />
-                                        </mat-form-field> 
+                                        </mat-form-field>
                                         <br>To (Inclusive)<br>
                                         <mat-form-field appearance="outline">
                                             <mat-label class="text-color">Destination</mat-label>
@@ -524,18 +529,86 @@
                             </mat-grid-tile>
 
                         </mat-grid-list>
+
+                        <pre></pre>
+                        <div style="margin: auto 75px;">
+                            <mat-progress-bar class="example-margin" mode="determinate" value="50"></mat-progress-bar>
+                        </div>
+                        <pre></pre>
                     </mat-tab>
                     <mat-tab label="Issue Permit">
                         <pre></pre>
-                        <div style="margin: auto 50px;">
-                            <mat-progress-bar value="primary" mode="determinate" value="100"></mat-progress-bar>
-                        </div>
-                        <mat-grid-list cols="4" rowHeight="100px">
-                            <mat-grid-tile *ngFor="let tile of tilesTab4" [colspan]="tile.cols" [rowspan]="tile.rows"
-                                [style.background]="tile.color">
-                                {{tile.text}}
+
+                        <mat-grid-list cols="2" rowHeight="3:1">
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                <mat-card class="transparent-card">
+                                    <section class="align-center">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Weightbridge Station</mat-label>
+                                            <mat-select [(ngModel)]="selectedValue" name="area">
+                                                <mat-option *ngFor="let area of areas" [value]="area.value">
+                                                    {{area.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">RTI Station(TOE's)</mat-label>
+                                            <mat-select [(ngModel)]="selectedValue" name="area">
+                                                <mat-option *ngFor="let area of areas" [value]="area.value">
+                                                    {{area.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                <mat-card class="transparent-card">
+                                    <mat-card-title class="text-align-center">Standard Permit
+                                        Conditions</mat-card-title>
+                                    <section class="align-center">
+                                        <mat-checkbox class="example-margin">1.a</mat-checkbox><br>
+                                        <mat-checkbox class="example-margin">1.b</mat-checkbox><br>
+                                        <mat-checkbox class="example-margin">2</mat-checkbox><br>
+                                        <mat-checkbox class="example-margin">3</mat-checkbox><br>
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                                <mat-card class="transparent-card">
+                                    <mat-card-title class="text-align-center">Require Engineer's/Technician's
+                                        Approval</mat-card-title>
+                                    <section class="align-center">
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                <mat-card class="transparent-card">
+                                    <mat-card-title class="text-align-center">Speeds</mat-card-title>
+                                    <section class="align-center">
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                <mat-card class="transparent-card">
+                                    <mat-card-title class="text-align-center">Escorts</mat-card-title>
+                                    <section class="align-center">
+                                    </section>
+                                </mat-card>
+                            </mat-grid-tile>
+
+                            <mat-grid-tile>
+                                <mat-card-actions class="align-right">
+                                    <button mat-raised-button color="accent"> Show Fee </button>
+                                </mat-card-actions>
                             </mat-grid-tile>
                         </mat-grid-list>
+
                         <pre></pre>
                         <div style="margin: auto 50px;">
                             <mat-progress-bar value="primary" mode="determinate" value="100"
