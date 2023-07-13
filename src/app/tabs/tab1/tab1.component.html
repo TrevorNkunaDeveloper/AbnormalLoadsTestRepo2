@@ -448,26 +448,77 @@
                                 </mat-card>
                             </mat-grid-tile>
 
-                            <mat-grid-tile [colspan]="1" [rowspan]="2">
+                            <mat-grid-tile [colspan]="1" [rowspan]="4">
                                 <mat-card class="transparent-card">
                                     <mat-card-title class="text-align-center">Route/ Area of Operation(6.2)</mat-card-title>
-                                    <section>
+                                    <section class="text-align-center">
+                                        Travelling from<br>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Point of Departure</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field> 
+                                        <br>to<br>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Destination</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Route Code</mat-label>
+                                            <mat-select [(ngModel)]="selectedValue" name="routeCode">
+                                                <mat-option *ngFor="let routeCode of routeCodes" [value]="routeCode.value">
+                                                    {{routeCode.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+
                                     </section>
                                 </mat-card>
                             </mat-grid-tile>
 
-                            <mat-grid-tile [colspan]="1" [rowspan]="2">
+                            <mat-grid-tile [colspan]="1" [rowspan]="4">
                                 <mat-card class="transparent-card">
                                     <mat-card-title class="text-align-center">Distance(6.3)</mat-card-title>
-                                    <section>
+                                    <section class="text-align-center">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Validity Period</mat-label>
+                                            <mat-select [(ngModel)]="selectedValue" name="period">
+                                                <mat-option *ngFor="let period of periods" [value]="period.value">
+                                                    {{period.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Operational Area</mat-label>
+                                            <mat-select [(ngModel)]="selectedValue" name="area">
+                                                <mat-option *ngFor="let area of areas" [value]="area.value">
+                                                    {{area.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Total Distance</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
                                     </section>
                                 </mat-card>
                             </mat-grid-tile>
 
-                            <mat-grid-tile [colspan]="1" [rowspan]="2">
+                            <mat-grid-tile [colspan]="1" [rowspan]="3">
                                 <mat-card class="transparent-card">
                                     <mat-card-title class="text-align-center">Exemption Period (6.4)</mat-card-title>
-                                    <section>
+                                    <section class="text-align-center">
+                                        From<br>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Point of Departure</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field> 
+                                        <br>To (Inclusive)<br>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label class="text-color">Destination</mat-label>
+                                            <input matInput type="text" />
+                                        </mat-form-field>
                                     </section>
                                 </mat-card>
                             </mat-grid-tile>

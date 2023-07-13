@@ -27,6 +27,21 @@ interface Avno {
   viewValue: string;
 }
 
+interface RouteCode {
+  value: string;
+  viewValue: string;
+}
+
+interface Period {
+  value: string;
+  viewValue: string;
+}
+
+interface Area {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-tab1',
   templateUrl: './tab1.component.html',
@@ -92,6 +107,28 @@ export class Tab1Component {
     {value:'avno-1',viewValue:'sample av no 2'},
     {value:'avno-2',viewValue:'sample av no 3'},
     {value:'avno-3',viewValue:'sample av no 4'},
+  ];
+
+  routeCodes: RouteCode[] = [
+    {value:'route-0',viewValue:'sample Route Code 1'},
+    {value:'route-1',viewValue:'sample Route Code 2'},
+    {value:'route-2',viewValue:'sample Route Code 3'},
+    {value:'route-3',viewValue:'sample Route Code 4'},
+  ];
+
+  periods: Period[] = [
+    {value:'avno-0',viewValue:'1 Week'},
+    {value:'avno-1',viewValue:'1 Month'},
+    {value:'avno-2',viewValue:'3 Months'},
+    {value:'avno-3',viewValue:'6 Months'},
+    {value:'avno-3',viewValue:'12 Months'},
+  ];
+
+  areas: Area[] = [
+    {value:'area-0',viewValue:'25 km'},
+    {value:'area-1',viewValue:'50 km'},
+    {value:'area-2',viewValue:'100 km'},
+    {value:'area-3',viewValue:'Namibia'},
   ];
 
   types : string[] = ['Trip', 'Route-Period', 'Area-Period'];
